@@ -1,27 +1,212 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <base href="/">
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Titan Security — профессиональная охрана и безопасность в Казахстане. Физическая охрана, личная безопасность, вооруженное сопровождение.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+      ВАЖНО: При сборке используйте команду:
+      flutter build web --release --base-href /Titan-security/
 
-  <!-- Preload Montserrat font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+      Эта строка автоматически заменяется Flutter на корректный base path.
+      Без неё все ресурсы дадут 404 на GitHub Pages.
+    -->
+    <base href="/Titan-security/">
 
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Titan Security">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="manifest" href="manifest.json">
+    <!-- ═══════════════════════════════════════
+         ОСНОВНЫЕ МЕТА-ТЕГИ
+    ═══════════════════════════════════════ -->
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Titan Security — Безопасность, которой можно доверять</title>
+    <title>Titan Security — Профессиональная охрана в Кыргызстане</title>
+
+    <meta name="description" content="Titan Security — ведущая охранная компания Кыргызстана с 2008 года. Физическая охрана, личная охрана VIP, вооружённое сопровождение, техническая безопасность и охрана мероприятий. 748 постов, 300+ объектов.">
+    <meta name="keywords" content="охранная компания Бишкек, физическая охрана, личная охрана, вооруженное сопровождение, охрана объектов, видеонаблюдение, СКУД, охрана мероприятий, Titan Security, безопасность Кыргызстан">
+    <meta name="author" content="Titan Security">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Russian">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="general">
+
+    <!-- Canonical URL — замените на ваш реальный домен -->
+    <link rel="canonical" href="https://tashtemirlan.github.io/Titan-security/">
+
+    <!-- ═══════════════════════════════════════
+         OPEN GRAPH (Facebook, Telegram, VK, WhatsApp)
+    ═══════════════════════════════════════ -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Titan Security">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="Titan Security — Безопасность, которой можно доверять">
+    <meta property="og:description" content="Профессиональная охрана объектов, личная безопасность и техническая защита с 2008 года. 748 постов охраны, 300+ охраняемых объектов, 133 мобильных экипажа.">
+    <meta property="og:url" content="https://tashtemirlan.github.io/Titan-security/">
+    <!-- Замените на реальный URL вашего og:image (1200x630px) -->
+    <meta property="og:image" content="https://tashtemirlan.github.io/Titan-security/icons/Icon-512.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="Titan Security — охранная компания">
+
+    <!-- ═══════════════════════════════════════
+         TWITTER / X CARD
+    ═══════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Titan Security — Профессиональная охрана">
+    <meta name="twitter:description" content="Физическая охрана, личная безопасность и техническая защита. Работаем с 2008 года в Кыргызстане.">
+    <meta name="twitter:image" content="https://tashtemirlan.github.io/Titan-security/icons/Icon-512.png">
+
+    <!-- ═══════════════════════════════════════
+         SCHEMA.ORG — Структурированные данные
+         Помогает Google показывать расширенные сниппеты
+    ═══════════════════════════════════════ -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SecurityBusiness",
+            "name": "Titan Security",
+            "description": "Профессиональная охранная компания в Кыргызстане. Физическая охрана, личная безопасность, вооружённое сопровождение, техническая защита.",
+            "url": "https://tashtemirlan.github.io/Titan-security/",
+            "logo": "https://tashtemirlan.github.io/Titan-security/icons/Icon-512.png",
+            "foundingDate": "2008",
+            "telephone": "+996552666466",
+            "email": "bezopasnosttitan@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "ул. Сухэ-Батора, д. 19, 2 этаж",
+                "addressLocality": "Бишкек",
+                "addressCountry": "KG"
+            },
+            "openingHours": "Mo-Su 00:00-24:00",
+            "sameAs": [
+                "https://instagram.com/titan_security.kg"
+            ],
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Охранные услуги",
+                "itemListElement": [
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Физическая охрана" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Личная охрана" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Вооружённое сопровождение" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Техническая охрана" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Охрана массовых мероприятий" } }
+                ]
+            }
+        }
+    </script>
+
+    <!-- ═══════════════════════════════════════
+         PWA / ИКОНКИ / МАНИФЕСТ
+    ═══════════════════════════════════════ -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="icons/Icon-192.png">
+
+    <!-- PWA мета-теги (обновлённый стандарт) -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Titan Security">
+    <meta name="theme-color" content="#000C17">
+    <meta name="msapplication-TileColor" content="#000C17">
+    <meta name="msapplication-TileImage" content="icons/Icon-192.png">
+
+    <!-- ═══════════════════════════════════════
+         ПРОИЗВОДИТЕЛЬНОСТЬ — Preconnect
+    ═══════════════════════════════════════ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Шрифт Montserrat — загружается параллельно -->
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+    >
+
+    <!-- ═══════════════════════════════════════
+         СТИЛИ ЗАГРУЗОЧНОГО ЭКРАНА
+         Показывается пока Flutter инициализируется
+    ═══════════════════════════════════════ -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+          background-color: #000C17;
+          font-family: 'Montserrat', sans-serif;
+        }
+
+        #loading-screen {
+          position: fixed;
+          inset: 0;
+          background-color: #000C17;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
+          transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        #loading-screen.hidden {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        .loading-logo {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 28px;
+          font-weight: 800;
+          color: #FFFFFF;
+          letter-spacing: 2px;
+          margin-bottom: 32px;
+        }
+
+        .loading-logo span {
+          color: #1A73E8;
+        }
+
+        .loading-spinner {
+          width: 40px;
+          height: 40px;
+          border: 3px solid #0A1628;
+          border-top-color: #1A73E8;
+          border-radius: 50%;
+          animation: spin 0.8s linear infinite;
+        }
+
+        .loading-tagline {
+          margin-top: 20px;
+          font-size: 13px;
+          color: #B0BEC5;
+          letter-spacing: 1px;
+        }
+
+        @keyframes spin {
+          to { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+
+<!-- Загрузочный экран — скрывается после инициализации Flutter -->
+<div id="loading-screen">
+    <div class="loading-logo">TITAN <span>SECURITY</span></div>
+    <div class="loading-spinner"></div>
+    <div class="loading-tagline">Безопасность, которой можно доверять</div>
+</div>
+
+<script>
+    // Скрываем загрузочный экран как только Flutter готов
+    window.addEventListener('flutter-first-frame', function () {
+      const screen = document.getElementById('loading-screen');
+      if (screen) {
+        screen.classList.add('hidden');
+        setTimeout(() => screen.remove(), 500);
+      }
+    });
+</script>
+
+<!-- Flutter bootstrap — современный способ запуска (Flutter 3.x+) -->
+<script src="flutter_bootstrap.js" async></script>
+
 </body>
 </html>
